@@ -9,7 +9,7 @@ def make_substatement_prompt(statement: str) -> str:
 -""".strip()
 
 async def assert_implications(
-    statement: str = "Bob murdered Alice on the 25th of June at the Rogers Estate with arsenic.",
+    statement: str = "Bob murdered Alice on the 25th of June at the estate with arsenic.",
 ):
     prompt = make_substatement_prompt(statement)
     substatements_text = await recipe.agent().complete(prompt=prompt)
